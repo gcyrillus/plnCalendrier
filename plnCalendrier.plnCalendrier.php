@@ -90,7 +90,7 @@ for($i=0;$i<$nbMonths;$i++)
 						$Title 	= ' title="'.$Event["Texte"].'"';
 						if($Event["Article"] != "")
 						{
-							$LienAvant 	= '<a class="event '.$Event["Style"].'" href="'.$plxMotor->urlRewrite('?article'.$Event["Article"]).'/"'.$Title.'>';
+							$LienAvant 	= '<a class="event '.$Event["Style"].'" href="'.$plxMotor->urlRewrite('?article'.$Event["Article"]).'"'.$Title.'>';
 							$LienApres 	= '</a>';
 						}
 						else
