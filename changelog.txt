@@ -1,0 +1,136 @@
+--------------------------------
+plnCalendrier 
+Changelog
+--------------------------------
+
+
+--------------------------------
+Fork v2.1.0  - 23/04/2023 
+
+Passage vers php8.2.5
+ajout d'un select pour associer facilement un article à un évenement.
+
+--------------------------------
+
+v2.1.0 - 10/03/2019 pluxml 5.7
+--------------------------------
+*Thomas : CLASS CONSTRUCT : PLX_ADMIN
+*Thomas : + L_CALENDRIER_ADMIN_MENU
+*Thomas : Admin avec onglets + in-action-bar + admin-nocache.css + tabs.js
+*Thomas : fix admin  L_SAVE
+*Thomas : config in-action-bar
+```
+		<p class="in-action-bar" style="z-index1"><input type="submit" name="submit" value="<?php $plxPlugin->lang('L_SAVE') ?>" /></p>
+```
+*Thomas : fix error onActivate si le dossier de cache deja présent : in CLASS :  : prévoir de le supprimer au onDeactivate ?
+//fix Warnings file_exists onActivate
+Warning: mkdir(): File exists in plugins/plnCalendrier/plnCalendrier.php on line 120
+Warning: Cannot modify header information - headers already sent by (output started at plugins/plnCalendrier/plnCalendrier.php:120) in core/admin/parametres_plugins.php on line 24
+```
+	public function onActivate()
+	{
+		if (!file_exists($this->CacheDirectory)) {
+			# On construit un répertoire de "cache" utilisé pour déposer certains fichiers et on protége son contenu par un fichier index.html vide
+			mkdir($this->CacheDirectory,0755);
+			touch($this->CacheDirectory."index.html");
+		}
+	}
+```
+*Thomas : Fix admin no show actual value txt in fields : in CLASS : Funk loadCalendrierFile()//fix object(SimpleXMLElement) with (string)
+```
+					$CurrentEvent[$key] = (string)$value;//fix object(SimpleXMLElement) 
+```
+
+v2.0.1 - 27/03/2016
+--------------------------------
+- Correction d'initialisation des variables de répertoires (qui n'étaient pas initialisées si plxStaticPages pas présent)
+
+v2.0.0 - 03/08/2015
+--------------------------------
+- Modifications et tests pour pluXml 5.4. 
+
+v1.7.1 - 06/07/2015
+--------------------------------
+- Retrait du pointage en dur vers "themes", utilisation de $plxAdmin->aConf['racine_themes']
+
+v1.7.0 - 21/06/2015
+--------------------------------
+- Possibilité de choisir la position de l'aide dans la sidebar, voire de la désactiver
+
+v1.6.1 - 05/05/2015
+--------------------------------
+- Suppression d'un bouton d'aide superflu dans la page config
+- Remplissage en blanc du fond des jours de la semaine (au lieu de transparent)
+- Intégration plnToolBox
+
+v1.6 - 03/05/2015
+--------------------------------
+- Possibilité pour l'admin de choisir le nombre de mois à afficher dans le calendrier principal (parmi 2, 3, 4, 6)
+- Possibilité pour l'admin de choisir le nombre de mois à afficher dans le calendrier secondaire (parmi 1, 2, 3, 4)
+- Mise en option du titre du calendrier de la sidebar, pour une meilleure prise en compte des thèmes spécifiques
+- Possibilité de choisir entre deux styles graphiques du calendrier (boutons de navigation & couleur de l'entête)
+- Purge des images inutiles (dossier 'images').
+
+v1.5 - 02/05/2015
+--------------------------------
+- Changement de nom : passage de plxCalendrier à plnCalendrier
+- Modification de l'affichage du calendrier semestriel & sidebar
+	- Refonte responsive 
+	- amélioration de la légende
+	- Possibilité de mettre plusieurs événements durant la même journée
+- Ajout d'un color-picker côté admin pour background & texte
+- Modification de la structure de sauvegarde
+- Simplification du code (retrait de deux classes)
+- Externalisation de la gestion de la fausse page statique "Calendrier" à l'aide du plugin plnStaticPages
+- Outil de migration pour transmettre les données de plxCalendrier à plnCalendrier
+
+v1.4
+--------------------------------
+- Amélioration de la prise en compte du répertoire "cache"
+- Amélioration de la sécurité du répertoire "cache"
+- Ajout de la gestion du profil nécessaire pour accéder à la partie "admin" (option dans la page de configuration)
+
+v1.3
+--------------------------------
+- Corrections mineures de code
+- Correction d'un bug sur la fonction de vérification d'article actif
+- Insertion d'un datepicker dans la partie "admin" (merci Stéphane)
+- Correction icône "supprimer" mal affichée dans la partie "admin"
+
+v1.2
+--------------------------------
+- Correction d'un bug qui apparait lorsqu'on met une date sans zéro (du genre 2/8/2015). 
+- Correction du message d'erreur lorsque la date est incorrecte.
+- Gestion et ajout d'un message d'erreur lorsqu'on tente de créer un événement à une date déjà associée à un événement.
+- Modification technique des css pour intégration logique à pluXml (création de fichiers site.css et admin.css + gestion)
+- Amélioration de la prise en compte des liens vers articles : On cesse de considérer '1' comme différent de '0001'
+
+v1.1
+--------------------------------
+- Ajout d'une taille définie aux carrés colorés de la légende
+- Affichage en ordre inversé des dates du calendrier dans l'interface d'admin
+- Ajout d'une page 'config.php' proposant de choisir le template "static" à utiliser
+- Modification technique des hooks pour simplifier grandement (plxShowConstruct et plxMotorPreChauffageBegin)
+- Ajout du mode de création "0750" pour les mkdir
+- Ajout d'un fichier "icon.png" pour offrir un visuel au plugin
+- Ajout de plusieurs "placeholder" dans la page d'admin pour guider les utilisateurs sur ce qui est demandé dans les champs
+- Intégration totale de l'internationalisation
+- Ajout de la langue anglaise
+- Ajout d'une page d'aide
+- Usage de PLX_PLUGINS au lieu de PLX_ROOT.'plugins/'
+- Ajout d'un message d'erreur si la date fournie est en erreur
+- Ajout d'un message d'erreur si le numéro d'article fourni ne correspond pas à un article existant
+- Modification de la méthode d'affichage du bouton "détruire" dans la page d'administration
+- Modification de la façon dont on gère le css spécifique (factorisation de parties standards)
+- Ajout de la possibilité de retirer le bouton "Calendrier" permettant d'accéder au calendrier semestriel
+- On accepte les formats AAAA-MM-JJ et JJ-MM-AAAA
+
+v1.0
+--------------------------------
+- Aucun changement, sinon que c'est une version stable mise en production
+
+v0.7
+--------------------------------
+- Ajout de la légende optionnelle apparaissant sous le calendrier semestriel
+
+

@@ -1,0 +1,37 @@
+<?php
+
+$LANG = array(
+	'L_CALENDRIER_ADMIN_MENU' 		=> 'Calendar',
+	'L_ADMIN_INFOBULLE' 		=> 'Administrate Calendar',
+	'L_ADMIN_TITLE' 			=> 'plnCalendrier Administration',
+	'L_ERREUR_DATE' 			=> "Error : the date (<DATE>) does not respect the required format (YYYY-MM-DD)",
+	'L_ERREUR_ARTICLE' 			=> "Warning : the article given (<ARTICLE>) does not seem to exist",
+	'L_CURRENT_MONTH'			=> 'The month...',
+	'L_CURRENTLY'				=> "Currently...",
+	'L_CALENDRIER'				=> "Calendar",
+	'L_SAVE'					=> 'Save',
+	'L_TEMPLATE'				=> "Calendar template",
+	'L_STYLES'					=> 'User styles',
+	'L_STYLE'					=> 'Style',
+	'L_EVENEMENTS'				=> 'Events',
+	'L_HELP_ARTICLE_ASSOCIE' 	=> "The article number can be found in editing the article and taking the last number in the URL, after ?a=",
+	'L_HELP_STYLE'				=> "Must be one the styles of the last chapter",
+	'L_HELP_LEGEND'				=> "If this field is filled, a legend will appear behind the calendar",
+	'L_EXAMPLE'					=> 'Example',
+	'L_LEGEND'					=> 'Legend',
+	'L_STYLE_NAME'				=> "Style name",
+	'L_CSS_COMMANDS'			=> "associated CSS Commands",
+	'L_HELP_TEMPLATE'			=> "In function of your theme, allows you to choose the 'static' template you want to apply to the calendar",
+	'L_DATE'					=> "Date",
+	'L_LABEL'					=> "Label",
+	'L_DESCRIPTION'				=> "Description",
+	'L_ASSOCIATED_ARTICLE'		=> "Associated article",
+	'L_INFOBULLE'				=> "Help text",
+	'L_YYYY-MM-DD'				=> 'YYYY-MM-DD',
+	'L_INSTATICLIST'			=> "Displays the 'Calendar' button",
+	'L_HELP_INSTATICLIST'		=> "A 'Calendar' button appears with the static pages buttons",
+	'oui'						=> 'yes',
+	'non'						=> 'no',
+
+);
+

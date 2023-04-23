@@ -1,0 +1,9 @@
+table.plnCalendrierMonth a.<Nom>,
+table.plnCalendrierMonth span.<Nom>,
+div.plnCalendrierExample.<Nom>,
+table.plnCalendrier div.event a.<Nom>,
+table.plnCalendrier div.event span.<Nom>,
+ul.event li div.<Nom> {
+	background-color:<BGColor>;
+	color:<TextColor>;
+	<Valeur>}

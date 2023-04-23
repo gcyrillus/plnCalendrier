@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<title><![CDATA[plnCalendrier]]></title>
+	<author><![CDATA[Gari, Thomas Ingles, G.Cyril]]></author>
+	<version>Fork 2.1.0</version>
+	<date>22/04/2023</date>
+	<site>https://github.com/gcyrillus</site>
+	<description><![CDATA[Permet d'afficher un calendrier d'événements en l'associant à un article. Nécessite le plugin technique plnStaticPages. Pour pluXml 5.X]]></description>
+	<requirements>plnStaticPages-1.0.0</requirements>
+	<scope></scope>
+</document>

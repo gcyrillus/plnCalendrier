@@ -1,0 +1,61 @@
+input[type="color"]{
+	width:40px;
+}
+.plnCalendrierAdmin h3{
+	font-size:1.5em;
+	font-style:italic;
+}
+.plnCalendrierAdmin table{
+	text-align:center;
+	border-collapse:collapse;
+	margin:1em 0;border:none;
+}
+.plnCalendrierAdmin table td,
+.plnCalendrierAdmin table th{
+	border:none;
+	text-align:center;
+	padding:2px;
+}
+div.plnCalendrierExample{
+	margin:0;
+	border-collapse:collapse;
+	border:none;
+	border:1px solid #679;
+	padding:0 4px;
+	border-radius:5px;
+}
+#plnCalendrierEvenements .select-style{
+	width:100%;
+	background-color:white;
+}
+#plnCalendrierAide p{
+	margin-bottom:5px;
+}
+a.plnCalendrierDetruire{
+	background-color: transparent;
+	padding:0 0 0 16px;
+	margin:0 0 0 2px;
+	cursor:default;
+	width:16px;
+	background: url("../../../plugins/plnCalendrier/images/16px-Crystal_Clear_action_stop.png") no-repeat 0 0;
+}
+#form_plxcalendrier h3{
+	margin:10px 0;
+	font-size:1.3em;
+	color:#AA3;
+}
+/**/
+.table-responsive > table{
+	width:100%;
+}
+
+/*
+https://www.elated.com/res/File/articles/development/javascript/document-object-model/javascript-tabs/javascript-tabs.html
+      body */div.tabContent { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+      ul#tabs {list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
+      ul#tabs li { display: inline; }
+      ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
+      ul#tabs li a:hover { background-color: #f1f0ee; }
+      ul#tabs li a.selected { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
+      div.tabContent { border: 1px solid #c9c3ba; padding: 1rem; background-color: #f1f0ee; overflow: auto; }
+      div.tabContent.hide { display: none; }

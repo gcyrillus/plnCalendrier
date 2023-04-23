@@ -1,0 +1,145 @@
+table.plnCalendrier		 					{ 	width:100%;
+												max-width: 300px;
+												text-align:center;
+												border-collapse:collapse;
+												border:none;
+												margin:0 0 1em 0;
+												font-size:0.9em;
+											}
+table.plnCalendrier td,
+table.plnCalendrier th						{ 	border:none; 
+												width:12%;
+												max-width:40px;
+												padding:1px;}
+table.plnCalendrier th:first-child 			{ 	border-right:1px solid #679}
+table.plnCalendrier tr:first-child 			{ 	border-bottom:1px solid #679}
+table.plnCalendrier .mois	 				{ 	color:red }
+table.plnCalendrier .gris 					{ 	color:#CCC }
+table.plnCalendrier td.event  				{	border:1px solid #679}
+table.plnCalendrier a						{	text-decoration:underline }
+
+table.plnCalendrier div.event				{	
+												margin:0;
+												padding:0;
+												font-size:0;
+											}
+table.plnCalendrier div.event a,
+table.plnCalendrier div.event span				{	
+												width:7px;
+												height:7px;
+												border-radius:3px;
+												border:1px solid black;
+												margin:0 1px 1px 0;
+												padding:0;
+												display:inline-block;
+											}
+
+
+/* Les boutons de navigation */
+
+table.plnCalendrierNav 			{ 	width:100%;
+									border-collapse:collapse;
+									margin:0;
+								}
+table.plnCalendrierNav,
+table.plnCalendrierNav tr,
+table.plnCalendrierNav td { border:none;}
+table.plnCalendrierNav td {	
+									vertical-align:top;
+									padding:0 1px;
+									font-size:0.95em;
+									width:16%
+								}
+table.plnCalendrierNav tr td 						{	vertical-align:middle}
+table.plnCalendrierNav tr td:first-child 			{	text-align:right}
+table.plnCalendrierNav tr a 						{	background-repeat:no-repeat;
+														width:48px;
+														height:48px;
+														vertical-align:middle;
+														font-size:0;
+														padding:48px 0 0 48px;
+													}
+
+table.plnCalendrierNav.azur   tr td:first-child a	{ background-image: url(./plnCalendrier/images/48px-Crystal_Clear_action_2leftarrow.png); }
+table.plnCalendrierNav.nature tr td:first-child a	{ background-image: url(./plnCalendrier/images/48px-go-first.png); }
+table.plnCalendrierNav tr td:first-child + td a			
+								{	background-image: url(./plnCalendrier/images/24px-Crystal_Clear_app_date.png);
+									width:24px;height:24px;padding:24px 0 0 24px; 
+								}
+table.plnCalendrierNav.azur 	tr td:first-child + td + td a 	{ background-image: url(./plnCalendrier/images/48px-Crystal_Clear_action_2rightarrow.png); }
+table.plnCalendrierNav.nature 	tr td:first-child + td + td a	{ background-image: url(./plnCalendrier/images/48px-finish.png); }
+table.plnCalendrierNav tr td:first-child + td 
+								{	vertical-align:middle;
+									text-align:center;
+									font-size:2em;
+									color:#146;
+								}
+table.plnCalendrierNav tr td:first-child + td + td 	{	text-align:left}
+
+/* Le calendrier semestriel */
+
+table.plnCalendrierMonth		{	margin:0 0 10px 5px;
+									border-collapse:collapse;
+									border:none;
+									font-size:0.8em;
+									min-width:100px;
+									vertical-align:top;
+									float:left;
+									background-color:white;
+								}
+table.plnCalendrierSize2		{	width:49%;}
+table.plnCalendrierSize3		{	width:32%;}
+table.plnCalendrierSize4		{	width:24%;}
+table.plnCalendrierSize6		{	width:16%;}
+table.plnCalendrierMonth tr 	{	border:1px solid #679;}
+table.plnCalendrierMonth td,
+table.plnCalendrierMonth th 	{	padding:0 4px;
+									vertical-align:middle;
+									margin:0;
+									border:none;
+									width:auto;
+								}
+table.plnCalendrierMonth th			{	text-align:center;	}
+table.plnCalendrierMonth.azur th	{	background-color:#BDF; }
+table.plnCalendrierMonth.nature th	{	background-color:#ABDA71; }
+table.plnCalendrierMonth tr.weekend	{	background-color:#CFCFCF;}
+ 
+table.plnCalendrierMonth td:first-child + td + td		
+								{	width:100%;text-align:left; }
+
+table.plnCalendrierMonth a					{	text-decoration:underline }
+td.event	{font-weight: bold;}
+
+table.plnCalendrierMonth .event 	 		{	border:1px solid #679;
+												display:block;
+												border-radius:5px;
+												padding:0 3px;
+												background-color:#FEEEDF;
+												color:black;
+												margin-bottom:2px;
+											}
+table.plnCalendrierMonth .event:first-child {	margin-top:2px;}
+
+/* Les légendes */
+
+ul.event		{ 	display:block;width:100%;clear:both;font-size:0.8em;}
+ul.event li		{ 	display:block;margin-bottom:5px;}
+ul.event li div { 	display:inline-block;
+					border:1px solid #679; 
+					height:24px; 
+					width:24px; 
+					line-height:20px; 
+					margin:0 5px 0 0;
+					padding:2px;
+					vertical-align:middle;}
+
+/* Les menus d'aide */
+
+div.plnCalendrierAide {	
+	font-style:italic;
+	text-align:justify;
+	font-size: 0.7em;
+	line-height:1.2;
+	margin-bottom:10px;
+}
+div.plnCalendrierAide p { margin:0;}
